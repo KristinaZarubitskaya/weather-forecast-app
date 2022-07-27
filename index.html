@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecast</title>
-    <link rel="stylesheet" href="src/style.css" />
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -19,42 +18,61 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="input-group">
-        <input
-          type="search"
-          class="form-control rounded"
-          placeholder="Enter your city"
-          aria-label="Search"
-          aria-describedby="search-addon"
-        />
-        <button type="button" class="btn btn-outline-primary">search</button>
-      </div>
+      <div class="app-wrapper">
+        <div class="weather-app">
+          <form>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Eneter a city"
+                  class="control search-input"
+                  id="enter-city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                  id="btn-search"
+                />
+              </div>
+            </div>
+          </form>
 
-      <div class="row">
-        <div class="col">
-          <h1>Odesa</h1>
-          <h4>
-            <div>Wednesday 11:31</div>
-            <div>clear sky</div>
-            <div>humidity:56%</div>
-            <div>wind: 5km/h</div>
-          </h4>
+          <div class="row">
+            <div class="col">
+              <h1 id="city-name">Odesa</h1>
+              <ul>
+                <li>Wednesday 11:31</li>
+                <li>clear sky</li>
+                <li>humidity:56%</li>
+                <li>wind: 5km/h</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h1>
+                <img src="img/sun.png" class="temp-img" />
+                <span class="now-temp"> 27</span>
+                <span class="units">°C|°F</span>
+              </h1>
+            </div>
+          </div>
         </div>
-        <div class="col">
-          <h1>🌞27°C</h1>
-        </div>
+        <small id="source-link">
+          <a
+            href="https://main--magical-custard-f4c72f.netlify.app/"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Kristina Zarubitskaya
+        </small>
       </div>
-      <small>
-        <a
-          href="https://main--magical-custard-f4c72f.netlify.app/"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Kristina Zarubitskaya
-      </small>
     </div>
   </body>
   <script src="src/script.js"></script>
