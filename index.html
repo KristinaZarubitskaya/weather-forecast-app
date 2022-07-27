@@ -18,6 +18,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -49,16 +50,16 @@
             <div class="col">
               <h1 id="city-name">Odesa</h1>
               <ul>
-                <li>Wednesday 11:31</li>
-                <li>clear sky</li>
-                <li>humidity:56%</li>
-                <li>wind: 5km/h</li>
+                <li id="dayTime">Wednesday 11:31</li>
+                <li id="description">clear sky</li>
+                <li>humidity: <span id="humidity"></span>%</li>
+                <li>wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
             <div class="col">
               <h1>
                 <img src="img/sun.png" class="temp-img" />
-                <span class="now-temp"> 27</span>
+                <span class="now-temp" id="temperature"></span>
                 <span class="units">°C|°F</span>
               </h1>
             </div>
