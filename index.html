@@ -25,12 +25,13 @@
     <div class="container">
       <div class="app-wrapper">
         <div class="weather-app">
-          <form>
+          <form id="search-form">
             <div class="row">
               <div class="col-9">
                 <input
                   type="search"
                   placeholder="Eneter a city"
+                  autocomplete="off"
                   class="control search-input"
                   id="enter-city-input"
                 />
@@ -48,10 +49,10 @@
 
           <div class="row">
             <div class="col">
-              <h1 id="city-name">Odesa</h1>
+              <h1 id="city-name"></h1>
               <ul>
-                <li id="dayTime">Wednesday 11:31</li>
-                <li id="description">clear sky</li>
+                <li id="dayTime"></li>
+                <li id="description"></li>
                 <li>humidity: <span id="humidity"></span>%</li>
                 <li>wind: <span id="wind"></span> km/h</li>
               </ul>
@@ -60,7 +61,13 @@
               <h1>
                 <img src=".." class="temp-img" id="icon" />
                 <span class="now-temp" id="temperature"></span>
-                <span class="units">°C|°F</span>
+                <span class="units"
+                  ><a href="#" id="CLink" class="active">°C</a>|<a
+                    href="#"
+                    id="FLink"
+                    >°F</a
+                  ></span
+                >
               </h1>
             </div>
           </div>
