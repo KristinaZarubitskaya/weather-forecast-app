@@ -49,6 +49,14 @@ a#FLink {
   text-decoration: none;
   cursor: default;
 }
+span#min-temp-day {
+  opacity: 0.6;
+}
+.weather-forecast-days {
+  text-align: center;
+  margin-top: 20px;
+  color: #272142;
+}
 
 .active {
   color: #272142;
@@ -92,4 +100,8 @@ a#FLink {
   position: relative;
   line-height: 1;
   top: -34px;
+}
+
+.day-image {
+  width: 40px;
 }

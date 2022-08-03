@@ -67,6 +67,26 @@ function displayCTemperature(event) {
   temperatureElement.innerHTML = Math.round(CTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `         <div class="col-2">
+                <div class="forecast-days">${day}</div>
+                <img src="img/sun.png" width="30" />
+                <br />
+                <span id="max-temp-day"> 18</span> /
+                <span id="min-temp-day">12</span>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let CTemperature = null;
 
 let FLink = document.querySelector("#FLink");
@@ -83,3 +103,4 @@ axios(apiUrl).then(displayTemperature);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesubmit);
 search("Odessa");
+displayForecast();
