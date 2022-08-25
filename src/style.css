@@ -105,3 +105,9 @@ span#min-temp-day {
 .day-image {
   width: 40px;
 }
+@media (max-width: 600px) {
+  .now-temp {
+    font-size: 50px;
+    font-weight: 400px;
+  }
+}
